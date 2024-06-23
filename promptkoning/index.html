@@ -1,0 +1,354 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   PromptKoning
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div class="flex items-center">
+     <!-- <img src="/promptkoning/PromptKoning_Logo_Transparent-removebg-preview.svg" alt="PromptKoning Logo" class="h-8 w-8 mr-2"/> -->
+     <div class="text-xl font-bold">
+      PROMPTKONING
+     </div>
+    </div>
+    <a class="bg-red-600 text-white px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" href="#" onclick="this.classList.add('scale-110'); setTimeout(() => this.classList.remove('scale-110'), 300);">
+     Boek nu
+    </a>
+   </div>
+  </header>
+  <main>
+
+   <section class="container mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl font-bold text-gray-900">
+     Werk slimmer,
+     <span class="animated-gradient-text">
+      presteer beter
+     </span>
+
+    </h1>
+    <p class="mt-4 text-lg text-gray-700">
+     PromptKoning is de plek voor bedrijven en professionals die hun mogelijkheden willen uitbreiden met AI.
+    </p>
+    <div class="mt-2 text-lg text-gray-700">
+     Met introductietrainingen, verdiepende trainingen en consultancy trajecten brengen we bedrijven en professionals naar de toekomst met de vaardigheden van vandaag.
+    </div>
+    <div class="mt-8">
+     <div class="relative h-8 rounded-full overflow-hidden">
+      <div class="absolute top-0 left-0 h-full bg-red-600 rounded-full bar-no-ai" style="width: 10%;">
+       <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-white font-bold text-sm">Zonder A.I</span>
+      </div>
+     </div>
+     <div class="relative h-8 rounded-full overflow-hidden mt-4">
+      <div class="absolute top-0 left-0 h-full bg-green-600 rounded-full bar-ai" style="width: 10%;">
+       <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-white font-bold text-sm">Met A.I</span>
+      </div>
+     </div>
+    </div>
+    <div class="mt-8 flex justify-center">
+     <div id="image-container" class="relative w-[600px] h-[400px]">
+      <img alt="Groep mensen in een vergadering" class="rounded-lg shadow-lg absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000" src="foto2.jpg"/>
+      <img alt="Persoon geeft een presentatie" class="rounded-lg shadow-lg absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" src="foto1.jpg"/>
+     </div>
+    </div>
+    <script>
+     (function() {
+      const images = document.querySelectorAll('#image-container img');
+      let currentIndex = 0;
+      
+      function rotateImages() {
+        images[currentIndex].style.opacity = '0';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = '1';
+      }
+
+      setInterval(rotateImages, 5000); // Change image every 5 seconds
+     })();
+     document.addEventListener('scroll', function() {
+      const noAiBar = document.querySelector('.bar-no-ai');
+      const aiBar = document.querySelector('.bar-ai');
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const triggerPosition = noAiBar.parentElement.offsetTop;
+
+      if (scrollPosition > triggerPosition) {
+       noAiBar.style.transition = 'width 4s ease-out';
+       aiBar.style.transition = 'width 4s ease-out';
+       noAiBar.style.width = '30%';
+       aiBar.style.width = '60%';
+      }
+     });
+    </script>
+   </section>
+   <section class="container mx-auto px-4 py-16 text-center">
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        Efficiëntieverbetering
+       </h3>
+       <p class="mt-4 text-lg text-gray-700">
+         Onze AI-oplossingen maken je bedrijfsprocessen tot
+         <span class="font-bold">
+          25%
+         </span>
+         efficiënter.
+       </p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        Kwaliteitsverhoging
+       </h3>
+       <p class="mt-4 text-lg text-gray-700">
+         Verhoog de kwaliteit van je werk met
+         <span class="font-bold">
+          40%
+         </span>
+         door AI.
+       </p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        Snelheid
+       </h3>
+       <p class="mt-4 text-lg text-gray-700">
+         Zie een stijging van
+         <span class="font-bold">
+          42.1%
+         </span>
+         in het aantal afgeronde taken.
+       </p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        Automatiseerbaarheid
+       </h3>
+       <p class="mt-4 text-lg text-gray-700">
+         Verwijder tot
+         <span class="font-bold">
+          50%
+         </span>
+         van je redundante taken door automatisering.
+       </p>
+      </div>
+     </div>
+    <style>
+      .underline-on-scroll {
+        position: relative;
+      }
+      .underline-on-scroll::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transition: width 2s ease-in-out;
+      }
+      .underline-on-scroll.in-view::after {
+        width: 100%;
+      }
+    </style>
+    <script>
+      document.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.underline-on-scroll');
+        elements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            element.classList.add('in-view');
+          } else {
+            element.classList.remove('in-view');
+          }
+        });
+      });
+    </script>
+   </section>
+   <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl font-bold text-gray-900">
+      Hoe
+      <span class="underline-on-scroll" style="color: transparent; background: linear-gradient(to right, red, green 80%); -webkit-background-clip: text;">
+       ondersteunen
+      </span>
+      wij u?
+     </h2>
+    </div>
+    <style>
+      .underline-on-scroll {
+        position: relative;
+        display: inline-block;
+      }
+      .underline-on-scroll::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transition: width 4s ease-in-out;
+      }
+      .underline-on-scroll.in-view::after {
+        width: 100%;
+      }
+    </style>
+    <script>
+      document.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.underline-on-scroll');
+        elements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            element.classList.add('in-view');
+          } else {
+            element.classList.remove('in-view');
+          }
+        });
+      });
+    </script>
+     <p class="mt-8 text-lg text-gray-700 mx-4">
+      PromptKoning specialiseert zich in het optimaliseren en integreren van AI-technologieën. We bieden wereldwijd expertise aan onze klanten, met focus op effectieve prompts en optimale resultaten.
+     </p>
+     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 mx-4">
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        AI-implementatie in uw organisatie
+       </h3>
+       <ul class="list-disc list-inside mt-4 text-lg text-gray-700">
+        <li>
+         Introductie van AI via onze
+         <span class="font-bold">
+          AI-introductietraining
+         </span>
+         of
+         <span class="font-bold">
+          Copilot Introductietraining
+         </span>
+        </li>
+        <li>
+         Verdieping met geavanceerde
+         <span class="font-bold">
+          ChatGPT
+         </span>
+         ,
+         <span class="font-bold">
+          Midjourney
+         </span>
+         of
+         <span class="font-bold">
+          Microsoft Copilot trainingen
+         </span>
+        </li>
+        <li>
+         Volledige integratie met ondersteuning van een
+         <span class="font-bold">
+          AI-consultant
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow-lg text-left">
+       <h3 class="text-xl font-bold text-gray-900">
+        Integratie van diverse AI-elementen
+       </h3>
+       <ul class="list-disc list-inside mt-4 text-lg text-gray-700">
+        <li>
+         Leer elementen combineren in onze
+         <span class="font-bold">
+          AI-integratietraining
+         </span>
+        </li>
+        <li>
+         Verdiep uw kennis met onze
+         <span class="font-bold">
+          AI-visualisatietraining
+         </span>
+        </li>
+        <li>
+         Optimaliseer uw gebruik van diverse AI-tools, inclusief maar niet beperkt tot ChatGPT
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="container mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold text-gray-900">
+     Onze
+     <span class="underline-on-scroll" style="color: transparent; background: linear-gradient(to right, red, green 80%); -webkit-background-clip: text;">
+      successen
+      <span style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(to right, red, green 80%); transition: width 2s ease-in-out;"></span>
+     </span>
+     spreken voor zich
+    </h2>
+    <p class="mt-4 text-lg text-gray-700">
+     Onze missie bij PromptKoning is dat iedereen zijn werk kan automatiseren, waardoor er ruimte ontstaat voor leuk, creatief en bevredigend werk.
+    </p>
+   </section>
+   <script>
+     document.addEventListener('DOMContentLoaded', () => {
+       const observer = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+           if (entry.isIntersecting) {
+             entry.target.querySelector('span > span').style.width = '100%';
+           } else {
+             entry.target.querySelector('span > span').style.width = '0';
+           }
+         });
+       }, { threshold: 0.5 });
+
+       const successenSpan = document.querySelector('h2 > span');
+       observer.observe(successenSpan);
+     });
+   </script>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+     
+      
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-200 text-gray-700 py-16 relative overflow-hidden">
+   <div class="container mx-auto px-4 flex">
+    <div class="w-1/2">
+     <h3 class="text-lg font-bold">
+      Contact
+     </h3>
+     <ul class="mt-4 space-y-2">
+      <li>
+        DICC bv
+       </li>
+       <li>
+        Schiebroeksesingel 2B
+       </li>
+       <li>
+        3051JL Rotterdam
+       </li>
+       <li>
+        promptkoning.nl
+       </li>
+       <li>
+        +31620335754
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="mt-16 text-center text-gray-400">
+     <a class="bg-red-600 text-white px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" href="#" onclick="this.classList.add('scale-110'); setTimeout(() => this.classList.remove('scale-110'), 300);">
+      Boek nu
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
